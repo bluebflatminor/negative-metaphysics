@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Negative Metaphysics — Where the Quantum-Mysticism Story Breaks</title>
+<meta name="description" content="A field guide for anyone who suspects the 'quantum proves the mystics right' story is too neat, and wants to see exactly where it breaks.">
+<meta name="color-scheme" content="light dark">
+<script>
+  (function(){ try{ var t=localStorage.getItem('nm-theme'); if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);} }catch(e){} })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDEDE8;
+    --paper-deep:#E5E5DF;
+    --ink:#1A1C1B;
+    --ink-soft:#565A57;
+    --foreclosed:#7C2F28;
+    --survive:#2B3D57;
+    --rule:#C6C7BF;
+    --rule-soft:#D6D7CF;
+    --chip-bg:rgba(0,0,0,.05);
+    --chip-ok-bg:rgba(43,61,87,.10);
+    --serif:"Newsreader",Georgia,serif;
+    --display:"Fraunces","Newsreader",Georgia,serif;
+    --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+    color-scheme:light dark;
+  }
+  :root[data-theme="dark"]{
+    --paper:#171818;--paper-deep:#1F2120;--ink:#E8E8E1;--ink-soft:#9DA09A;
+    --foreclosed:#CD6151;--survive:#8FA5CB;--rule:#363835;--rule-soft:#282A28;
+    --chip-bg:rgba(255,255,255,.06);--chip-ok-bg:rgba(143,165,203,.16);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#171818;--paper-deep:#1F2120;--ink:#E8E8E1;--ink-soft:#9DA09A;
+      --foreclosed:#CD6151;--survive:#8FA5CB;--rule:#363835;--rule-soft:#282A28;
+      --chip-bg:rgba(255,255,255,.06);--chip-ok-bg:rgba(143,165,203,.16);
+    }
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;background:var(--paper)}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--serif);font-size:19px;line-height:1.66;font-weight:400;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:700px;margin:0 auto;padding:0 28px}
+
+  .eyebrow{font-family:var(--mono);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);font-weight:500}
+
+  /* hero */
+  .hero{padding:76px 0 40px}
+  .hero .eyebrow{display:block;margin-bottom:28px}
+  h1{font-family:var(--display);font-weight:500;font-size:clamp(2.6rem,8vw,4.3rem);line-height:.98;letter-spacing:-.02em;margin:0 0 14px}
+  h1 .neg{font-style:italic;font-weight:400}
+  .dek{font-family:var(--display);font-weight:400;font-size:clamp(1.15rem,3.4vw,1.5rem);line-height:1.3;color:var(--ink-soft);max-width:28ch;margin:0}
+  .subdek{font-size:1rem;line-height:1.55;color:var(--ink-soft);max-width:46ch;margin:18px 0 0}
+
+  .foreclosure{margin:48px 0 0;padding:28px 28px 24px;background:var(--paper-deep);border:1px solid var(--rule)}
+  .foreclosure .label{display:block;margin-bottom:18px;color:var(--foreclosed)}
+  .conjunction{font-family:var(--mono);font-weight:500;font-size:clamp(1rem,3.6vw,1.4rem);line-height:1.5;color:var(--foreclosed);position:relative;display:inline;letter-spacing:-.01em}
+  .conjunction .strike{position:absolute;left:-4px;right:-4px;top:52%;height:3px;background:var(--foreclosed);transform:scaleX(0);transform-origin:left center;animation:cut 1s cubic-bezier(.7,0,.3,1) .5s forwards}
+  @keyframes cut{to{transform:scaleX(1)}}
+  .foreclosure .after{margin:22px 0 0;font-size:1rem;line-height:1.55;color:var(--ink)}
+  .foreclosure .after b{font-weight:500;color:var(--survive)}
+  @media (prefers-reduced-motion:reduce){.conjunction .strike{animation:none;transform:scaleX(1)}.fade{opacity:1!important;transform:none!important}}
+
+  /* orientation */
+  .orient{padding:36px 0 6px;font-size:1.05rem;line-height:1.68}
+  .orient .eyebrow{display:block;margin-bottom:18px}
+  .orient p{margin:0 0 18px}
+  .orient p:last-child{margin-bottom:0}
+
+  section{padding:14px 0}
+  .divider{display:flex;align-items:center;margin:44px 0 28px;height:1px}
+  .divider::before{content:"";flex:0 0 46px;height:3px;background:var(--foreclosed)}
+  .divider::after{content:"";flex:1;height:1px;background:var(--rule)}
+
+  h2{font-family:var(--display);font-weight:500;font-size:clamp(1.5rem,4.6vw,2rem);line-height:1.08;letter-spacing:-.015em;margin:0 0 4px}
+  h2 .num{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;color:var(--foreclosed);font-weight:500;margin-bottom:13px}
+  h3{font-family:var(--display);font-weight:600;font-size:1.12rem;letter-spacing:-.01em;margin:28px 0 2px}
+  p{margin:16px 0}
+  a{color:var(--survive);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+  em,i{font-style:italic}
+  strong{font-weight:600}
+  .term{color:var(--foreclosed);font-weight:500}
+  .live{color:var(--survive);font-weight:500}
+
+  .lede::first-letter{font-family:var(--display);font-weight:500;font-size:3.4em;float:left;line-height:.72;padding:.06em .09em 0 0;color:var(--foreclosed)}
+
+  .key{border-left:3px solid var(--foreclosed);padding:6px 0 6px 22px;margin:28px 0;font-family:var(--display);font-weight:400;font-size:1.2rem;line-height:1.36}
+
+  /* survivor axis */
+  .axis{margin:28px 0 8px}
+  .axis .ends{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
+  .axis .track{height:2px;background:var(--survive);opacity:.32;margin:0 0 26px}
+  .axisrow{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--rule-soft);align-items:baseline}
+  .axisrow:first-of-type{border-top:none}
+  .axisrow .name{font-family:var(--display);font-weight:600;font-size:1rem}
+  .axisrow .name small{display:block;font-family:var(--mono);font-weight:400;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px}
+  .axisrow .what{font-size:.93rem;line-height:1.5}
+  .axiscap{font-family:var(--mono);font-size:.75rem;color:var(--foreclosed);margin-top:16px;line-height:1.55}
+
+  /* two-panel contrast (logic + resonance) */
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:24px 0}
+  .card{border:1px solid var(--rule);padding:19px 19px 21px;background:var(--paper-deep)}
+  .card .h{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--survive);font-weight:500;margin-bottom:6px}
+  .card .sys{font-family:var(--display);font-weight:600;font-size:1.02rem;margin-bottom:9px}
+  .card .move{font-size:.9rem;line-height:1.5}
+  .card .foot{font-family:var(--mono);font-size:.68rem;color:var(--ink-soft);margin-top:12px;line-height:1.5}
+  .card.kill .h{color:var(--foreclosed)}
+  @media(max-width:560px){.twocol{grid-template-columns:1fr}}
+
+  /* closing warning (demoted appendix) */
+  .coda{background:var(--paper-deep);margin-top:20px}
+  .coda .wrap{padding:40px 28px 44px}
+  .coda .eyebrow{display:block;margin-bottom:14px;color:var(--foreclosed)}
+
+  /* sources / working notes */
+  .notes{padding:8px 0 0}
+  .notes h2{font-size:1.3rem}
+  .srclist{font-family:var(--mono);font-size:.75rem;line-height:1.5;margin:18px 0 0;padding:0;list-style:none}
+  .srclist li{padding:9px 0;border-top:1px solid var(--rule-soft)}
+  .srclist li:first-child{border-top:none}
+  .srclist .w{font-family:var(--serif);font-size:.92rem;color:var(--ink)}
+  .st-ok{color:var(--survive);font-weight:500}
+  .st-no{color:var(--foreclosed);font-weight:500}
+
+  footer{border-top:3px solid var(--foreclosed);margin-top:0}
+  footer .wrap{padding:34px 28px 60px}
+  .colophon{font-family:var(--mono);font-size:.72rem;line-height:1.7;color:var(--ink-soft)}
+  .colophon b{color:var(--ink);font-weight:500}
+
+  .theme-toggle{position:fixed;top:15px;right:15px;z-index:20;font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);background:var(--paper-deep);border:1px solid var(--rule);border-radius:2px;padding:7px 11px;cursor:pointer;line-height:1;display:inline-flex;align-items:center;gap:8px;transition:color .2s,border-color .2s}
+  .theme-toggle:hover{color:var(--foreclosed);border-color:var(--foreclosed)}
+  .theme-toggle:focus-visible{outline:2px solid var(--survive);outline-offset:2px}
+  .theme-toggle .dot{width:8px;height:8px;border-radius:50%;background:var(--foreclosed);flex:0 0 auto}
+  @media print{.theme-toggle{display:none}}
+  @media(max-width:600px){.theme-toggle{top:11px;right:11px;font-size:.6rem;padding:6px 9px}}
+
+  .fade{opacity:0;transform:translateY(12px);animation:up .8s ease .1s forwards}
+  @keyframes up{to{opacity:1;transform:none}}
+  ::selection{background:var(--foreclosed);color:var(--paper)}
+
+  @media(max-width:600px){
+    body{font-size:17px}
+    .wrap{padding:0 22px}
+    .hero{padding:54px 0 30px}
+    .foreclosure{padding:22px 20px}
+    .axisrow{grid-template-columns:1fr;gap:3px}
+  }
+</style>
+</head>
+<body>
+
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch between light and dark mode"><span class="dot" aria-hidden="true"></span><span id="themeLabel">Light</span></button>
+
+<header class="hero">
+  <div class="wrap fade">
+    <span class="eyebrow">A field guide · Philosophy &amp; physics · Draft v0.4</span>
+    <h1><span class="neg">Negative</span><br>Metaphysics</h1>
+    <p class="dek">Where the quantum-mysticism story breaks — and what survives once it does.</p>
+    <p class="subdek">For anyone who has read the essays claiming physics vindicated the East, felt that a trick had been performed somewhere, and wanted to find the exact seam.</p>
+
+    <div class="foreclosure">
+      <span class="eyebrow label">What the mathematics actually kills</span>
+      <span class="conjunction">locality&nbsp; ∧ &nbsp;separability&nbsp; ∧ &nbsp;definite&nbsp;values<span class="strike"></span></span>
+      <p class="after">Not a worldview. A <em>combination</em>. Bell's theorem and Kochen–Specker strike out one package of classical assumptions and leave the rest of the field standing — <b>plural, contested, and occupied at both ends at once</b>.</p>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="orient">
+    <span class="eyebrow">Start here</span>
+    <p>There is a genre of essay that says quantum mechanics proved the mystics right: that Bell's theorem and entanglement confirm what Nāgārjuna and the Daoists already knew — a world with no separate substances, relational all the way down. It runs from Fritjof Capra's <em>The Tao of Physics</em> (1975) to its most serious recent instance, the physicist Carlo Rovelli's <em>Helgoland</em>, which devotes a chapter to Nāgārjuna. The genre is seductive, and its careful practitioners are careful. But most readers finish one with a faint conviction that a sleight of hand has occurred, and no way to say where.</p>
+    <p>This is an attempt to say where. The problem is not that the traditions are foolish; several are more rigorous than the essays that invoke them. The problem is a claim about what the <em>physics</em> does. Read closely, the mathematics does something narrower, and stranger, than the genre needs — and once you see the shape of it, you have a tool that works on every essay of this kind you will ever read.</p>
+  </div>
+
+  <section>
+    <div class="divider"></div>
+    <h2><span class="num">01 — The move to watch</span>Subtraction, not selection</h2>
+    <p class="lede">Here is the whole hinge. A theorem in physics can do two very different jobs. It can <em>select</em> a picture of the world — hand you a positive account of what there is. Or it can <em>subtract</em> — rule out a combination of assumptions and tell you only what the world is not. Bell's theorem and the Kochen–Specker theorem do the second job. They are foreclosures.</p>
+    <p>What Bell forecloses is a <em>conjunction</em>: you cannot keep locality, separability, and observer-independent definite values all at once and still match what experiments show. Kochen–Specker adds that if you keep definite values at all, they cannot be non-contextual. Neither result tells you which assumption to drop. Neither hands you a replacement metaphysics. They partition the space of possible worldviews into a foreclosed region and a surviving region — and then fall silent.</p>
+    <p>The mysticism genre needs the first job. It needs physics to have <em>selected</em> a relational, non-substantial picture that the traditions can then be said to match. But physics only did the second job. This is the seam. Everything below is a consequence of it.</p>
+    <p style="font-size:.94rem;color:var(--ink-soft)"><em>Two boundaries, so this isn't mistaken for something larger.</em> First, on scope: the target here is a single inference — "physics confirms this metaphysics." It is not the claim that metaphysics must pass laboratory tests to be worth anything. Metaphysics has its own standards: coherence, explanatory reach, economy. Those are untouched. What fails is one specific bridge from an experiment to a worldview. Second, on precision: Bell forecloses the conjunction <em>given one further premise</em> — measurement independence, roughly that what an experimenter chooses to measure is not itself pre-correlated with the system. Deny that premise (the "superdeterminist" option) and locality can be kept. It is a live position, rarely the one the mysticism essays are reaching for, but naming it is the difference between stating the theorem and overstating it.</p>
+  </section>
+
+  <section>
+    <div class="divider"></div>
+    <h2><span class="num">02 — The most useful picture</span>Look who survives</h2>
+    <p>If physics had really selected the relational picture, then the serious interpretations of quantum mechanics would converge on it. They do the opposite. Here is the surviving region, laid out from the most substance-committed account to the most relation-committed. Every one of them reproduces the experiments exactly.</p>
+
+    <div class="axis">
+      <div class="ends"><span>◄ substance-committed</span><span>relation-committed ►</span></div>
+      <div class="track"></div>
+      <div class="axisrow">
+        <div class="name">Bohmian mechanics<small>substantival about position</small></div>
+        <div class="what">Real particles with definite positions at every moment, riding a guiding wave. Deterministic. It keeps almost everything the classical picture wanted about matter — it just pays for survival in <em>locality</em>.</div>
+      </div>
+      <div class="axisrow">
+        <div class="name">Collapse theories<small>GRW / CSL</small></div>
+        <div class="what">A small tweak to the dynamics makes outcomes definite on their own, no observer required. Substance-committed about the settled configuration.</div>
+      </div>
+      <div class="axisrow">
+        <div class="name">Many worlds<small>Everett</small></div>
+        <div class="what">Take the equation literally; nothing collapses; the branches are all real. Determinism intact. No special role for mind or measurement.</div>
+      </div>
+      <div class="axisrow">
+        <div class="name">Priority monism<small>whole before parts</small></div>
+        <div class="what">The cosmos as a single whole is more fundamental than its parts — and entanglement is offered as an <em>argument</em> for this, not a mood. The disciplined cousin of "everything is one."</div>
+      </div>
+      <div class="axisrow">
+        <div class="name">Structural realism<small>relations first</small></div>
+        <div class="what">Individual objects with fixed intrinsic natures drop out; relations are what's basic. This is the rigorous version of the picture the mysticism essays reach for — and it's argued from the physics, not from scripture.</div>
+      </div>
+      <div class="axisrow">
+        <div class="name">Relational QM<small>properties are relative</small></div>
+        <div class="what">Rovelli's interpretation: a system's properties are definite only <em>relative</em> to another system, with no privileged observer and no absolute state. This is the survivor that explicitly reaches for Nāgārjuna — and the one we'll test the tool on in §04. It is also contested, one live option among the rest.</div>
+      </div>
+      <p class="axiscap">Every account on this line survives Bell. A view that keeps persisting, definite-position particles (Bohm) sits in the same surviving region as views that dissolve objects into relations (structural realism, relational QM). They cannot all be "the metaphysics quantum mechanics revealed." The survivors are plural, and they contradict each other.</p>
+    </div>
+
+    <p>This is the single most useful thing to carry away. The next time an essay tells you the quantum world <em>is</em> relational and process-like, remember that a fully deterministic theory of little particles with definite positions accounts for the same experiments. The physics did not pick a side. If a worldview claims the physics picked its side, that claim is doing work the physics never did.</p>
+  </section>
+
+  <section>
+    <div class="divider"></div>
+    <h2><span class="num">03 — The deepest feature, and why it still doesn't settle things</span>What non-separability does and doesn't buy</h2>
+    <p>Give the strong reading its best card. Of everything quantum mechanics forecloses, <span class="live">non-separability</span> is the one that feels less like a lost assumption and more like a positive discovery about the world: the state of a whole entangled system is genuinely not built up from the states of its parts. This is the real rupture, and it is where the generative readings get their traction. It deserves to be taken seriously rather than filed as one constraint among many.</p>
+    <p>But here is what taking it seriously actually shows. Non-separability is real — and it is realized in <em>incompatible</em> ways across the survivors. In Bohmian mechanics it lives in a guiding field defined over the configuration of the whole system. In structural realism it means relations are ontologically prior to relata. In priority monism it means the whole is prior to its parts. These are three different metaphysical homes for the same physical fact, and they cannot all be true.</p>
+    <div class="key">Even the deepest quantum feature does not select a metaphysics. It relocates the disagreement one floor up — and leaves it just as unsettled.</div>
+  </section>
+
+  <section>
+    <div class="divider"></div>
+    <h2><span class="num">04 — The tool you keep</span>Two things "resonance" can mean</h2>
+    <p>When a tradition and a physical theory seem to rhyme, the feeling is real. The mistake is letting one word, <em>resonance</em>, carry two jobs that pull in opposite directions. Separate them and most of the confusion in this whole area dissolves.</p>
+
+    <div class="twocol">
+      <div class="card">
+        <div class="h">Heuristic resonance</div>
+        <div class="sys">makes an idea easier to think</div>
+        <div class="move">A framework you already hold can make a strange result feel familiar, give you vocabulary for it, even help you reach for the right hypothesis first. This is real and valuable. It is a fact about <em>you</em> and your conceptual equipment.</div>
+        <div class="foot">verdict → yes, this exists</div>
+      </div>
+      <div class="card kill">
+        <div class="h">Evidential resonance</div>
+        <div class="sys">gives reason to think it true</div>
+        <div class="move">The physics confirms the tradition; the match is evidence the worldview is <em>correct</em>. This is the claim the genre needs — and it is the one that fails, because incompatible worldviews resonate equally well and none of them was ever at risk of being wrong.</div>
+        <div class="foot">verdict → no, this doesn't follow</div>
+      </div>
+    </div>
+
+    <p>Almost every quantum-mysticism essay works by starting you in the left column and quietly sliding you into the right. Yes, Madhyamaka can make an entangled world feel less alien to someone raised on it — that is heuristic, and it is fine to say so. It does not follow that the entangled world is <em>evidence</em> for Madhyamaka. The test that would make it evidence is one the tradition never took: it risked no prediction, so it passed no trial it could have failed. Compatibility with the results is cheap — nearly every survivor has it, including the ones the tradition contradicts.</p>
+
+    <p>Run the tool on the strongest case. When Rovelli reaches for Nāgārjuna in <em>Helgoland</em>, he is — to his credit — mostly staying in the left column: he calls emptiness a "philosophical home" for relational QM, a way of framing an interpretation he already had. That is heuristic resonance done honestly by a working physicist, and there is nothing wrong with it. The slide happens downstream, when a reader converts "this ancient framework helped a physicist think" into "the physics shows the framework was right." Hold the columns apart and you can see why that second step fails even here: relational QM is <em>one</em> contested survivor, and at the far end of the same axis sits Bohmian mechanics — same experiments, persisting particles with their positions intrinsically, precisely the self-standing existence Nāgārjuna denies. The physics that gives Rovelli his relational reading gives Bohm his substantival one. A congruence that also fits your opposite cannot be evidence for you.</p>
+
+    <p>Keep the two columns apart and you can enjoy the resonance honestly without being sold the conclusion. That single distinction is the most portable thing in this guide.</p>
+  </section>
+
+  <section>
+    <div class="divider"></div>
+    <h2><span class="num">05 — Checking the technical claim</span>The logic that isn't the same logic</h2>
+    <p>The most specific claim you'll meet is that the Buddhist <em>catuṣkoṭi</em> — the "four corners," where a proposition can be true, false, both, or neither — is the <em>same</em> non-classical logic as quantum logic. Both abandon plain true-or-false, so the identity feels safe. It isn't, and you can see why without a logic degree.</p>
+
+    <div class="twocol">
+      <div class="card">
+        <div class="h">Catuṣkoṭi</div>
+        <div class="sys">adds more values</div>
+        <div class="move">Formalized (by Graham Priest) as a logic with extra truth-values — <em>both</em> and <em>neither</em> join true and false. It relaxes the rule that every claim is exactly one of true/false.</div>
+        <div class="foot">breaks classicality by → multiplying values</div>
+      </div>
+      <div class="card">
+        <div class="h">Quantum logic</div>
+        <div class="sys">keeps values, drops a law</div>
+        <div class="move">Every claim stays cleanly true or false. What changes is <em>distribution</em> — the everyday rule that "A and (B or C)" equals "(A and B) or (A and C)" — which fails for quantum propositions.</div>
+        <div class="foot">breaks classicality by → dropping distribution</div>
+      </div>
+    </div>
+
+    <p>They leave classical logic through different doors. One adds truth-values and keeps the laws; the other keeps two truth-values and drops a law. "Both are non-classical" is true and almost empty — so is intuitionistic logic, so are many systems. Being non-classical in <em>different ways</em> is not being the same. The strongest-sounding technical claim in the genre turns out to be its cleanest error.</p>
+    <p style="font-size:.93rem;color:var(--ink-soft)">(Scholars dispute how to read the four corners — some argue for a fully consistent reconstruction rather than Priest's contradiction-tolerant one. It doesn't matter for the point: on any reading offered, the four corners are not the non-distributive lattice of quantum logic.)</p>
+  </section>
+
+  <section>
+    <div class="divider"></div>
+    <h2><span class="num">06 — A better home for a true idea</span>"Everything is connected" belongs elsewhere</h2>
+    <p>The Buddhist thought that nothing has independent, self-standing existence — that each thing is what it is only through its conditions — is a real and defensible idea. The essays pin it to quantum entanglement. That is the wrong shelf, and moving it to the right one is a gift to the idea, not an attack on it.</p>
+    <p>Dependence-on-conditions is a claim about what it takes for anything <em>whatsoever</em> to exist. Entanglement is a specific physical relation between particular systems. Mapping the first onto the second shrinks a completely general thesis down to one laboratory phenomenon. Contemporary philosophy already has the right shelf: the literature on <span class="live">grounding</span> and ontological dependence, which studies exactly what it means for one thing to hold in virtue of another. Put the Buddhist claim there and it gets to talk to priority monism and structural realism as a peer — instead of being chained to a result about photons it was never about.</p>
+    <p>This relocation is more interesting <em>because</em> it is more accurate. The honest version of the idea is bigger than the quantum version, not smaller.</p>
+  </section>
+
+  <section>
+    <div class="divider"></div>
+    <h2><span class="num">07 — The question worth asking</span>Why always these traditions?</h2>
+    <p>There's a fair question underneath the whole genre, and it survives the demolition: why do the <em>same</em> traditions keep getting pulled into the quantum orbit — Madhyamaka, Daoism, process thought — and never, say, Aristotle? The honest answer is more interesting than "because they were right."</p>
+    <p>What quantum mechanics foreclosed was a specifically <em>substantival</em> package — separate things, with their own definite properties, sitting apart from one another. Any tradition that had already refused that package will, of course, look congruent with the wreckage afterward. It isn't prescience; it's that the foreclosed conjunction and the tradition happen to deny the same thing. And there is a plainer human factor: the people who go looking for these parallels are usually already fond of the traditions, so the search runs warm.</p>
+    <div class="key">Not holding the doomed assumptions is something a Buddhist logician shares with a hidden-variable physicist. It cannot be what makes either of them right.</div>
+    <p>That last point is the quiet clincher. Bohmian mechanics also doesn't hold the full classical package — it's nonlocal, contextual, non-separable — and no one calls Bohm a mystic. Congruence-with-the-wreckage is common ground shared by views that contradict each other. Whatever is worth keeping in the traditions, it cannot be established by the fact that physics knocked down something they had also declined to hold.</p>
+  </section>
+
+  <section>
+    <div class="divider"></div>
+    <h2><span class="num">08 — What's left when the story ends</span>The honest residue</h2>
+    <p>Strip out the overreach and something real remains, small and worth having. Quantum mechanics did genuine metaphysical work — but <em>negative</em> work. It foreclosed a combination of classical commitments that many people had mistaken for plain common sense, and that is a serious result about the world. It just didn't replace them with a single successor, and it didn't crown any tradition.</p>
+    <p>The traditions keep their real dignity too, once they stop being asked to be physics. Their affinity with contemporary thought is at the level of <em>stance</em> — a situated, perspective-aware realism, as in Michela Massimi's work — and at the level of <em>diagnosis</em>: the old bivalent, substance-first picture was inadequate. They part ways at the level of specific cure. That is a truer and more durable relationship than "physics proved them right," which was always a loan against a bank that can't pay.</p>
+    <p>And notice the tell of a claim that's actually load-bearing: none of this needed Nāgārjuna to license it. The argument stands on the physics and the logic alone. When a conclusion still holds after you remove its most beautiful ornament, the ornament was decoration. That is exactly the test the genre never runs on itself.</p>
+  </section>
+
+</div>
+
+<div class="coda">
+  <div class="wrap">
+    <span class="eyebrow">One last thing to watch for</span>
+    <p>Increasingly, the essays in this genre are assembled by language models — often several in a chain, each polishing the last. This makes the failure mode faster and harder to spot, because each pass raises the fluency without adding a single check. Several models agreeing is not several confirmations; if they share the same training and the same blind spots, their agreement is one blurry opinion wearing five coats. A specimen of exactly this circulated during the writing of this guide: a chain of five models produced a gorgeous version of the story that still misattributed a Heisenberg idea to Daoism, leaned on a physics proof known to be flawed, and called two different logics "precisely isomorphic" one sentence after disclaiming any identity. No pass caught any of it. The prose got better; nothing got truer.</p>
+    <p style="margin-bottom:0">The defense is the same tool as the rest of this guide, turned on the page in front of you: ask what claim is being made, and what would show it false. If nothing could, you are reading resonance dressed as evidence.</p>
+  </div>
+</div>
+
+<div class="wrap notes">
+  <div class="divider"></div>
+  <section>
+    <h2>Working notes &amp; sources</h2>
+    <p style="font-size:.95rem;color:var(--ink-soft)">This is a draft. All sources below are verified — each resolves to the cited title, authors, and venue. Reader-facing text avoids technical citation clutter on purpose; the scaffolding lives here.</p>
+    <ul class="srclist">
+      <li><span class="w">Priest, "The Logic of the Catuṣkoṭi," <em>Comparative Philosophy</em> 1(2), 2010; <em>The Fifth Corner of Four</em>, OUP 2018</span> — four-corners logic (§05) · <span class="st-ok">verified</span></li>
+      <li><span class="w">Garfield &amp; Priest, "Nāgārjuna and the Limits of Thought," <em>Philosophy East and West</em> 53(1), 2003</span> — two truths, limit-contradiction · <span class="st-ok">verified</span></li>
+      <li><span class="w">Massimi, <em>Perspectival Realism</em>, OUP 2022 (doi:10.1093/oso/9780197555620.001.0001)</span> — stance-level affinity (§08) · <span class="st-ok">verified</span></li>
+      <li><span class="w">Schaffer, "Monism: The Priority of the Whole," <em>Philosophical Review</em> 119(1), 2010, 31–76 (doi:10.1215/00318108-2009-025)</span> — priority monism from physics (§02) · <span class="st-ok">verified</span></li>
+      <li><span class="w">Schaffer, "On What Grounds What," in <em>Metametaphysics</em>, eds. Chalmers, Manley &amp; Wasserman, OUP 2009, 347–383</span> — grounding (§06) · <span class="st-ok">verified</span></li>
+      <li><span class="w">Ladyman &amp; Ross, <em>Every Thing Must Go: Metaphysics Naturalized</em>, OUP 2007; French, <em>The Structure of the World</em>, OUP 2014</span> — structural realism (§02) · <span class="st-ok">verified</span></li>
+      <li><span class="w">Maudlin, <em>Quantum Non-Locality and Relativity</em>, Wiley-Blackwell, 3rd ed. 2011 (doi:10.1002/9781444396973)</span> — the foreclosure reading (§01) · <span class="st-ok">verified</span></li>
+      <li><span class="w">Wallace, <em>The Emergent Multiverse</em>, OUP 2012; Albert, <em>Quantum Mechanics and Experience</em>, Harvard UP 1992</span> — Everett, Bohm (§02) · <span class="st-ok">verified</span></li>
+      <li><span class="w">Fine, "The Question of Realism," <em>Philosophers' Imprint</em> 1(1), 2001, 1–30</span> — ontological dependence (§06) · <span class="st-ok">verified</span></li>
+      <li><span class="w">Birkhoff &amp; von Neumann, "The Logic of Quantum Mechanics," <em>Annals of Mathematics</em> 37(4), 1936, 823–843 (doi:10.2307/1968621)</span> — non-distributive lattice (§05) · <span class="st-ok">verified</span></li>
+      <li><span class="w">Rovelli, "Relational Quantum Mechanics," <em>Int. J. Theor. Phys.</em> 35(8), 1996, 1637–1678 (doi:10.1007/BF02302261); <em>Helgoland</em>, 2021</span> — RQM, the Nāgārjuna case (§02, §04) · <span class="st-ok">verified</span></li>
+      <li><span class="w">Capra, <em>The Tao of Physics</em>, 1975</span> — named as the genre's origin (orientation) · <span class="st-ok">verified</span></li>
+    </ul>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p class="colophon">
+      <b>Negative Metaphysics</b> — a field guide · draft v0.4 · Solbakken Research Initiative<br>
+      Written for the reader the genre underserves: the one who suspected the story was too neat and wanted the seam.<br><br>
+      Method: for every claim, ask what would show it false. Sources DOI-gated before publication.<br>
+      Text CC0. Cited works remain under their own rights.
+    </p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.style.animation='up .7s ease forwards'; io.unobserve(e.target); } });
+    },{threshold:.12});
+    document.querySelectorAll('section > h2, .key, .foreclosure').forEach(function(el){
+      el.style.opacity='0'; el.style.transform='translateY(10px)'; io.observe(el);
+    });
+  })();
+</script>
+<script>
+  (function(){
+    var root=document.documentElement, btn=document.getElementById('themeToggle'), label=document.getElementById('themeLabel');
+    var mq=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;
+    function current(){var f=root.getAttribute('data-theme');if(f==='dark'||f==='light')return f;return (mq&&mq.matches)?'dark':'light';}
+    function paint(){label.textContent=current()==='dark'?'Dark':'Light';}
+    paint();
+    btn.addEventListener('click',function(){var n=current()==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('nm-theme',n);}catch(e){}paint();});
+    if(mq&&mq.addEventListener){mq.addEventListener('change',function(){try{if(localStorage.getItem('nm-theme'))return;}catch(e){}paint();});}
+  })();
+</script>
+
+</body>
+</html>
