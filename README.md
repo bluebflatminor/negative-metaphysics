@@ -1,76 +1,52 @@
 # Negative Metaphysics
 
-*A field guide to where the "quantum proves the mystics right" story breaks — and what survives once it does.*
+*A field guide to where the "physics proved the mystics right" story breaks — and what survives once it does.*
 
-**Status:** draft v0.5 · **Live:** https://bluebflatminor.github.io/negative-metaphysics/
+**Draft v0.6 · Solbakken Research Initiative · text CC0**
 
 ---
 
 ## What this is
 
-A short, reader-facing essay about a specific and common mistake: the claim that quantum mechanics *confirmed* an Eastern, relational, non-substantial metaphysics that Nāgārjuna or the Daoists reached first. The genre runs from Capra's *The Tao of Physics* to Carlo Rovelli's *Helgoland*.
+There's a durable genre of essay claiming that modern physics vindicated an older worldview: that Bell's theorem and entanglement confirm what Nāgārjuna or the Daoists already knew. It's seductive, its careful practitioners are careful, and most readers still finish one convinced a trick was performed somewhere — without being able to say where.
 
-The essay's claim is not that the traditions are foolish — several are more rigorous than the essays that invoke them. The claim is about what the *physics* does. Bell's theorem and Kochen–Specker perform **subtraction, not selection**: they foreclose a *combination* of classical assumptions (locality, separability, definite values) and leave the rest of the field standing — plural, contested, and occupied at both ends at once. They never hand you a successor worldview, so no worldview can claim to be the one they picked. What is left is not silence but **constraint**: metaphysics survives inside the corridor the mathematics leaves open, rather than above it.
+This guide says where. The argument is narrow and, I think, decisive: Bell's theorem and Kochen–Specker **subtract** — they foreclose a *combination* of classical assumptions (locality ∧ separability ∧ definite values) — but they do not **select** a replacement worldview. The genre needs selection. It only ever gets subtraction. Everything else follows from that one seam.
 
-## Who it's for
+The payoff isn't a takedown. It's a portable tool: separate *heuristic* resonance (a framework makes an idea easier to think — real, valuable) from *evidential* resonance (the physics shows the framework is true — the step that fails, because incompatible worldviews all "resonate" equally well and none was ever at risk of being wrong).
 
-The reader the genre underserves: the person who finished a "quantum proves Nāgārjuna" essay with a real sense that a trick had been performed somewhere, and wanted the exact seam. Also useful to philosophy undergraduates, science communicators, and anyone who needs a portable test rather than a debunking.
+## What's new in v0.6
 
-## The argument in one minute
+- **§10 — "The tool travels."** The seam was never about mysticism; it's a shape of inference. v0.6 turns it on a live case that didn't exist when the guide began: the claim that Anthropic's 2026 "J-space" result shows AI is developing sentience / free will / consciousness. Same move — reading a coronation into a foreclosure — with a twist worth the section: *both* "the machines are waking up" and "it's still just autocomplete" commit the identical error in opposite directions.
+- **Expanded §09.** The historical rhyme now runs across five domains rather than three — Faraday–Maxwell (fields), Noether (symmetry ↔ conservation), Darwin (teleology relocated to selection), and Gödel (the purest subtraction, in logic itself) — each showing metaphysics *relocated*, not abolished.
+- **Recursive coda.** The genre's newest specimens argue AI has an inner life and are increasingly written *by* AI. The guide turns its own tool on the page in front of you, this page included.
 
-- **Subtraction, not selection.** The theorems rule a combination out; they don't rule a metaphysics in.
-- **Look who survives.** Bohmian mechanics (persisting, definite-position particles) sits in the same surviving region as structural realism and relational QM (objects dissolved into relations). They reproduce the same experiments and contradict each other — so the physics did not pick a side.
-- **The tool you keep.** Separate *heuristic* resonance (a tradition makes an idea easier to think — real, and about you) from *evidential* resonance (the physics shows the tradition is true — the step that fails). The guide runs this test on the strongest case, Rovelli's use of Nāgārjuna, and shows why it holds even there.
-- **A better home.** "Everything is connected" belongs with the philosophy of *grounding*, not with entanglement.
-- **Constraint, not silence.** Empirical equivalence across incompatible ontologies is *underdetermination*, not skepticism. Physics constrains metaphysics without determining it — a shift from dogmatic to constraint-based ontology, not the end of metaphysics.
+## Structure
 
-## Read it
+| § | |
+|---|---|
+| 01 | Subtraction, not selection — the whole hinge |
+| 02 | Look who survives — the plural, contradictory interpretations |
+| 03 | What non-separability does and doesn't buy |
+| 04 | Two things "resonance" can mean — the portable tool |
+| 05 | The logic that isn't the same logic (catuṣkoṭi ≠ quantum logic) |
+| 06 | "Everything is connected" belongs elsewhere (grounding, not photons) |
+| 07 | Why always these traditions? |
+| 08 | The honest residue |
+| 09 | Constraint, not silence — the wider lesson |
+| 10 | The tool travels — a new subject, the same seam |
 
-- **Live page:** https://bluebflatminor.github.io/negative-metaphysics/
-- **Or** open `index.html` locally. It is a single self-contained file — no build step, no dependencies. Fonts load from Google Fonts and degrade gracefully offline.
-- Light/dark mode follows your system setting; a toggle (top-right) overrides it.
+## Reading / deployment
 
-## Contents
+Single self-contained `index.html` — no build step, no dependencies, light/dark aware. Deploys as-is to GitHub Pages. Open the file locally or visit the Pages URL.
 
-1. Subtraction, not selection — the move to watch
-2. Look who survives — the plural-survivors axis
-3. What non-separability does and doesn't buy
-4. Two things "resonance" can mean — the portable tool
-5. The logic that isn't the same logic — catuṣkoṭi vs. quantum logic
-6. A better home for "everything is connected" — grounding, not entanglement
-7. Why always these traditions? — the selection pattern
-8. What's left when the story ends
-9. Constraint, not silence — the wider lesson
-- *Coda:* the same failure mode in AI-assembled essays
-- *Working notes & sources*
+## Sourcing discipline
 
-## Changelog
+Every reference is DOI-gated (or, where no DOI exists, resolved against the live primary source) before deployment: each must resolve to the cited title, authors, and venue. This is not decorative. In v0.6 the check caught a propagated error — the Anthropic paper was drafted as "16 authors" (a figure from a secondary summary); the primary page shows **18**, lead author **Wes Gurnee**. The correction is recorded in the guide's working notes rather than silently fixed. Several models agreeing is not several confirmations; the gate exists because fluency rises faster than accuracy.
 
-**v0.5** — Added section 9, "Constraint, not silence," the essay's capstone: it names **underdetermination** (distinguishing it from skepticism), adds the **negative/positive** correction (physics rules pictures out *and* makes some more attractive, but "attractive" is a heuristic pull, not proof), and lands the **Galileo → constraint-based-metaphysics** historical arc — framed as our clearer view of a standing situation rather than a one-way change in physics. §01's scope note now points forward to it. New verified source: van Fraassen, *The Scientific Image* (1980). The apophatic-theology analogy is deliberately kept out of the body and recorded in the working notes with a method-only disclaimer.
+## Method, in one line
 
-**v0.4** — Added relational QM to the survivor axis and ran the heuristic/evidential tool on Rovelli's *Helgoland* as the genre's strongest case; added a superdeterminism (measurement-independence) precision note to §01; named *The Tao of Physics* as the genre's origin; trimmed §03. New verified sources: Rovelli (1996; *Helgoland* 2021), Capra (1975).
-
-**v0.3** — Reader-facing rebuild: reoriented from a referee-facing paper to a field guide for the underserved reader; demoted the citation apparatus out of the prose; demoted the AI-pipeline critique to a closing coda. All nine outstanding sources DOI-verified.
-
-## Method
-
-Falsification-first. For every claim, the question asked is *what would show this false*. Two working rules:
-
-- **DOI-gate.** Every source is verified to resolve to its cited title, authors, and venue before deployment. "Verified" here means the reference is real and correctly described — not that every inflection of how the text leans on it has been independently re-read.
-- **Correlated noise.** This piece was developed through adversarial review across several language models. Agreement between models that share training and blind spots is treated as *one* opinion, not several confirmations — a principle the closing coda turns on the genre itself.
-
-## Sources
-
-All sources are verified and listed in the *Working notes & sources* section of the page, with DOIs where they exist. Load-bearing anchors include Priest on the catuṣkoṭi (FDE), Birkhoff & von Neumann on quantum logic, Schaffer on priority monism, Ladyman & Ross and French on structural realism, Maudlin on the foreclosure reading, Rovelli on relational QM, and van Fraassen on underdetermination.
-
-## Deploying
-
-This repo is served with GitHub Pages. `index.html` at the repository root is the published page. To enable: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / root**.
+For every claim, ask what would show it false. If nothing could, you're reading resonance dressed as evidence.
 
 ## License
 
-Text is released under **CC0** (public domain). Cited works remain under their own rights.
-
----
-
-*Part of the Solbakken Research Initiative. Related: "On Slop," a field guide to AI-generated plausibility.*
+Text released **CC0** (public domain dedication). Cited works remain under their own rights. Reuse, remix, and adaptation welcome without attribution — though a pointer back is always appreciated.
