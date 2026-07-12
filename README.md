@@ -1,8 +1,8 @@
-# Negative Metaphysics
+ Negative Metaphysics
 
 **A field guide to where the quantum-mysticism story breaks — and what survives once it does.**
 
-Draft **v0.7** · Solbakken Research Initiative · Text CC0
+Draft **v0.8** · Solbakken Research Initiative · Text CC0
 
 📄 Live page: `index.html` (GitHub Pages)
 
@@ -48,6 +48,7 @@ A closing coda addresses multi-model-authored essays in this genre: chained flue
 
 ## Version history
 
+- **v0.8** — Editorial pass (external non-adversarial review, treated as editorial, not verification) plus a self-directed adversarial pass on the v0.7 edits. §10 reframed as an explicit *Application* with its asymmetry against §§01–09 stated in-section; §01 foreshadows §09's attractiveness refinement; Gödel comparison softened from equivalence to shared shape. Self-caught: the v0.7 Rovelli paraphrase tracked his wording too closely and was loosened; its page anchor was secondary-sourced and is now flagged as such. In-body verification flags retained by design until the three v1.0 blockers resolve.
 - **v0.7** — Adversarial review pass. Removed an unverifiable quotation attributed to Rovelli ("philosophical home"); §04 now paraphrases his documented account (~p.72, Penguin e-book). Demoted §10's search-design claim to conditional pending a methods anchor. Flagged the §10 citation debt and the coda specimen as pending. Reconciled §05 bivalence wording with Kochen–Specker. Tightened §04's Bohm contrast against §07's concession. Added the resolution-vs-content distinction to the verification protocol.
 - **v0.6** — Added §09 (constraint, not silence) and §10 (the tool travels). Corrected the Anthropic entry against the live page: lead author restored to Wes Gurnee; author count 16 → 18 (the "16" came from a secondary summary — an early instance of the resolution-vs-content gap later formalized in v0.7).
 - **v0.5 and earlier** — Core guide, §§01–08.
